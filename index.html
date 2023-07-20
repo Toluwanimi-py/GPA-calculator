@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./index.css" />
+    <title>GP calculator</title>
+  </head>
+  <body>
+    <main class="main">
+      <div class="top">
+        <span class="logo">
+          <span class="first">GPA</span> <span class="second">Calculator</span>
+        </span>
+      </div>
+      <div class="body">
+        <form class="number-input" id="number-input">
+          <h3 class="body-title" for="">Add Course:</h3>
+          <div class="course-details">
+            <label for="">
+              Course Code:
+              <input required type="text" id="codeInput"
+            /></label>
+            <label for="">
+              Grade:
+              <input required type="text" id="gradeInput"
+            /></label>
+            <label for="">
+              Units:
+              <input required type="number" id="unitInput"
+            /></label>
+          </div>
+          <div class="corse-details-btns">
+            <button type="submit" class="btn" id="addBTN">Add Couse</button>
+            <button type="button" class="btn" id="resetBTN">Reset</button>
+          </div>
+        </form>
+        <div class="unitInput" id="">
+          <ol class="each-info-con" id="info-con">
+            <!-- <li>
+              <span class="info-code">
+                CSC 101
+              </span>
+              <span class="info-grade">
+                A
+              </span>
+              <span class="info-unit">
+                4
+              </span>
+            </li> -->
+          </ol>
+
+          <!-- <div class="each-info-con">
+            <label for="">
+              Grade:
+              <input type="text" />
+            </label>
+            <label for="">
+              Unit:
+              <input type="text" />
+            </label>
+          </div> -->
+        </div>
+        <button class="btn generate-btn" id="generate-btn">
+          Calculate GPA
+        </button>
+        <div class="result">
+          <h3 id="outRes"> <span></span></h3>
+        </div>
+      </div>
+      <footer>
+        2023 &copy Tolu.py & Glory.js
+        <div>
+          Department of Computer Sci, 2021/2022 set <br />
+          @ EKSU
+        </div>
+      </footer>
+    </main>
+    <script src="./index.js"></script>
+  </body>
+</html>
