@@ -6,7 +6,7 @@ const generatebtn = document.getElementById("generate-btn");
 
 // api request
 const postToAPI = (data) => {
-  const url = "http://127.0.0.1:5000/";
+  const url = "https://dashing-sprinkles-73b7c3.netlify.app";
   fetch(url, {
     method: "post",
     headers: {
