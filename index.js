@@ -6,7 +6,7 @@ const generatebtn = document.getElementById("generate-btn");
 
 // api request
 const postToAPI = (data) => {
-  const url = "https://dashing-sprinkles-73b7c3.netlify.app";
+  const url = "https://toluwanimi.pythonanywhere.com/";
   fetch(url, {
     method: "post",
     headers: {
