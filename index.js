@@ -5,7 +5,7 @@ const resetBTN = document.getElementById("resetBTN");
 const generatebtn = document.getElementById("generate-btn");
 const out = document.getElementById("outRes");
 const resTable =  document.getElementById("res-table");
-let delBtn =  document.getElementsByClassName("delBtn");
+// let delBtn =  document.getElementsByClassName("delBtn");
 
 // api request
 const postToAPI = (data) => {
@@ -71,9 +71,9 @@ resetBTN.addEventListener("click", () => {
 });
 
 // delete btn
-delBtn.addEventListener('click', (e)=>{
-  console.log(e);
-}) 
+// delBtn.addEventListener('click', (e)=>{
+//   console.log(e);
+// }) 
 
 // getting all the grades and units accepted from the user and putting them into arrays
 generatebtn.addEventListener("click", () => {
@@ -87,6 +87,5 @@ generatebtn.addEventListener("click", () => {
     parseInt(single.innerText.trim())
   );
   const data = { grades: gradesArr, units: unitsArr };
-  console.log(data);
   postToAPI(data);
 });
