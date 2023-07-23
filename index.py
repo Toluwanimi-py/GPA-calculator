@@ -82,3 +82,6 @@ def output(list_of_grades):
     #     print('You need to do better.')
     # else:
     #     print('OMO!')
+
+if __name__ == '__main__':
+    app.run(debug=False, host='0.0.0.0')

@@ -6,7 +6,7 @@ const generatebtn = document.getElementById("generate-btn");
 
 // api request
 const postToAPI = (data) => {
-  const url = "https://toluwanimi.pythonanywhere.com/";
+  const url = "http://127.0.0.1:5000/";
   fetch(url, {
     method: "post",
     headers: {
