@@ -7,7 +7,7 @@ const out = document.getElementById("outRes");
 
 // api request
 const postToAPI = (data) => {
-  const url = "http://toluwanimi.pythonanywhere.com/";
+  const url = "https://toluwanimi.pythonanywhere.com/";
   fetch(url, {
     method: "post",
     headers: {
