@@ -24,6 +24,7 @@ const postToAPI = (data) => {
     })
     .catch(function (error) {
       console.log("Request failed", error);
+      out.innerText = 'ERROR!! invalid input, reset and re-enter inputs.';
     });
 };
 
