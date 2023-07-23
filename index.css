@@ -89,6 +89,36 @@ input:focus {
     gap: 10px;
 }
 
+table,
+th,
+td {
+    border: 1px solid ;
+    width: 100%;
+}
+
+table {
+    margin: 20px 0;
+    display: none;
+    border-collapse: collapse;
+}
+
+td, th{
+    padding: 10px 20px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+span.delBtn{
+    font-size: small;
+    color: rgb(243, 69, 69);
+    text-decoration: underline;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+
+.unitInput{
+    width: 100%;
+}
 
 .btn {
     display: flex;
@@ -110,26 +140,10 @@ input:focus {
 .generate-btn {
     width: 100%;
     padding: 10px 0;
+    margin: 30px 0;
+    display: none;
 }
 
-ol.each-info-con {
-    width: 90%;
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-}
-
-ol.each-info-con li {
-    margin: 10px 0;
-    border-bottom: 1px solid rgba(128, 128, 128, 0.513);
-}
-
-ol.each-info-con li span {
-    margin: 0 15px;
-    font-size: 18px;
-    font-weight: bold;
-    text-transform: uppercase;
-}
 
 
 .result h3 {
