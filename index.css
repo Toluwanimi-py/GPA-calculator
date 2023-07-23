@@ -76,6 +76,10 @@ input {
     font-size: 18px;
 }
 
+a{
+    color: coral;
+}
+
 input:focus {
     outline: none;
 }
