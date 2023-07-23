@@ -3,10 +3,11 @@ const numberinput = document.getElementById("number-input");
 const reesultsContainer = document.getElementById("info-con");
 const resetBTN = document.getElementById("resetBTN");
 const generatebtn = document.getElementById("generate-btn");
+const out = document.getElementById("outRes");
 
 // api request
 const postToAPI = (data) => {
-  const url = "http://127.0.0.1:5000/";
+  const url = "http://toluwanimi.pythonanywhere.com/";
   fetch(url, {
     method: "post",
     headers: {
@@ -18,9 +19,8 @@ const postToAPI = (data) => {
       return resp.json();
     })
     .then(function (data) {
-      const out = document.getElementById('outRes');   
-      out.innerText = data.data    
-      return data
+      out.innerText = data.data;
+      return data;
     })
     .catch(function (error) {
       console.log("Request failed", error);
@@ -64,6 +64,7 @@ resetBTN.addEventListener("click", () => {
   codeInput.value = "";
   gradeInput.value = "";
   unitInput.value = "";
+  out.innerText = "";
 });
 
 // getting all the grades and units accepted from the user and putting them into arrays
