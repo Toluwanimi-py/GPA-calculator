@@ -5,7 +5,9 @@ const resetBTN = document.getElementById("resetBTN");
 const generatebtn = document.getElementById("generate-btn");
 const out = document.getElementById("outRes");
 const resTable =  document.getElementById("res-table");
-// let delBtn =  document.getElementsByClassName("delBtn");
+var delBtn = document.createElement("span");
+delBtn.setAttribute("class", "delBtn");
+
 
 // api request
 const postToAPI = (data) => {
@@ -32,12 +34,15 @@ const postToAPI = (data) => {
 
 // function to add more inputs to the end of the given the number of courses
 const appendFunc = (code, grade, unit, id) => {
+  console.log(delBtn);
+  // delBtn.setAttribute("id", `del-${id}`);
   reesultsContainer.insertAdjacentHTML(
     "beforeend",
     `  <tr id='${id}'>
     <td>${code}</td>
     <td class='info-grade'>${grade}</td>
     <td class='info-unit'>${unit}</td>
+    <td class='action'>${delBtn}</td>
   </tr>`
   // <td class='action'><span title="Remove Row" class="delBtn" id='del-${id}'>Remove</div></td>
   );
@@ -46,6 +51,7 @@ const appendFunc = (code, grade, unit, id) => {
 // check if the input is changed and get what it changes to
 numberinput.addEventListener("submit", (e) => {
   e.preventDefault();
+  delBtn = document.getElementsByClassName("delBtn");
   const codeInput = document.getElementById("codeInput");
   const gradeInput = document.getElementById("gradeInput");
   const unitInput = document.getElementById("unitInput");
@@ -71,9 +77,9 @@ resetBTN.addEventListener("click", () => {
 });
 
 // delete btn
-// delBtn.addEventListener('click', (e)=>{
-//   console.log(e);
-// }) 
+delBtn.addEventListener('click', (e)=>{
+  console.log(e);
+}) 
 
 // getting all the grades and units accepted from the user and putting them into arrays
 generatebtn.addEventListener("click", () => {
